@@ -1283,6 +1283,7 @@ GameObject:
   - component: {fileID: 74031389064868417}
   - component: {fileID: 5059091156377526152}
   - component: {fileID: 7136779284411959216}
+  - component: {fileID: 5770273942780982050}
   m_Layer: 3
   m_Name: BluePlayer
   m_TagString: BluePlayer
@@ -1465,6 +1466,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 2696536092615862736}
   - {fileID: 74031389064868417}
+  - {fileID: 5770273942780982050}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1551,6 +1553,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5770273942780982050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5142187764680321206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: isMoving
+  m_SynchronizeLayers:
+  - SynchronizeType: 2
+    LayerIndex: 0
 --- !u!1 &5147929627830633224
 GameObject:
   m_ObjectHideFlags: 0

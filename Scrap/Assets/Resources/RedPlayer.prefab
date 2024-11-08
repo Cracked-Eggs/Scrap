@@ -2846,6 +2846,7 @@ GameObject:
   - component: {fileID: 3508260277183504888}
   - component: {fileID: -1747873899219894199}
   - component: {fileID: 4180856462096598213}
+  - component: {fileID: 4805079816446238334}
   m_Layer: 3
   m_Name: RedPlayer
   m_TagString: RedPlayer
@@ -3028,6 +3029,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 3510388682080458811}
   - {fileID: 3508260277183504888}
+  - {fileID: 4805079816446238334}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -3114,3 +3116,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4805079816446238334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8816103834071147403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: isMoving
+  m_SynchronizeLayers:
+  - SynchronizeType: 2
+    LayerIndex: 0

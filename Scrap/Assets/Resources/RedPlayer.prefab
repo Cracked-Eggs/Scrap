@@ -755,12 +755,12 @@ GameObject:
   - component: {fileID: 7928112255314907750}
   - component: {fileID: 3381087447713218862}
   - component: {fileID: 8043703529067733582}
-  - component: {fileID: -7887638726357615136}
   - component: {fileID: 3574552713809688084}
   - component: {fileID: 3485370479163899373}
+  - component: {fileID: 7180709019005413410}
   m_Layer: 3
-  m_Name: Player
-  m_TagString: Player
+  m_Name: RedPlayer
+  m_TagString: RedPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -778,6 +778,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 9167422660276600842}
   - {fileID: 162688930488400844}
   - {fileID: 8489155145699073327}
   - {fileID: 721988717854482452}
@@ -828,6 +829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canRetach: 0
   customGravity: -9.57
+  magnetRepel: {fileID: 8300000, guid: 39b0ab49d91fda446af544cc0a7d6f23, type: 3}
   ogJumpForce: 0
   head: {fileID: 2972032258099344316}
   head2: {fileID: 919907406164809514}
@@ -973,20 +975,6 @@ MonoBehaviour:
   camera: {fileID: 4069909198493609819}
   nicknameText: {fileID: 2155295499379828254}
   player: {fileID: 4659533964315482069}
---- !u!114 &-7887638726357615136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2162401590190693216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a6b199fe8cd07448d9c6b8f7c86c11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLocalInstance: 0
-  health: 100
 --- !u!114 &3574552713809688084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,6 +1012,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7180709019005413410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2162401590190693216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b22cba2f0414f49a6eb3909735ddc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocalInstance: 0
+  health: 100
 --- !u!1 &2568374201871850050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,6 +2381,76 @@ Transform:
   - {fileID: 7298769415761400826}
   m_Father: {fileID: 8553973668704006282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6216821977478382121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9167422660276600842}
+  - component: {fileID: 4734973701994242795}
+  - component: {fileID: 1041338883860407014}
+  m_Layer: 3
+  m_Name: Collider
+  m_TagString: BluePlayer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9167422660276600842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216821977478382121}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6892681109749900930}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &4734973701994242795
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216821977478382121}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.26
+  m_Height: 7.69
+  m_Direction: 1
+  m_Center: {x: 0, y: -2.12, z: 0}
+--- !u!114 &1041338883860407014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216821977478382121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce11999cdc59da34a8b94d5ddbfc13e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TeamName: 
+  cappedpointlist: []
 --- !u!1 &6431439062862863816
 GameObject:
   m_ObjectHideFlags: 0

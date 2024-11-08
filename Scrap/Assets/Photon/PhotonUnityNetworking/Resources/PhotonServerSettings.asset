@@ -58,6 +58,13 @@ MonoBehaviour:
   - RPC_SetBoolAccordingtoPart
   - RPC_ShootLeftArm_All
   - RPC_ShootRightArm_All
+  - Add_UI_Score_Blue
+  - Add_UI_Score_Red
+  - BeginKOTHMode
+  - Blue_Winner
+  - CheckNicknamesAndStartTimer
+  - Red_Winner
+  - SyncTimer
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

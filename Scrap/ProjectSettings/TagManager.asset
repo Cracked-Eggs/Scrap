@@ -16,6 +16,8 @@ TagManager:
   - Head3
   - Head4
   - Head5
+  - BluePlayer
+  - RedPlayer
   layers:
   - Default
   - TransparentFX

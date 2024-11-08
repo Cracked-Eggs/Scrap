@@ -2918,7 +2918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canRetach: 0
   customGravity: -9.57
-  magnetRepel: {fileID: 0}
+  magnetRepel: {fileID: 8300000, guid: 988f4a86c5ffad847b6c96b15338cdb8, type: 3}
   ogJumpForce: 0
   head: {fileID: 6048527847375011629}
   head2: {fileID: 6949322211067858749}

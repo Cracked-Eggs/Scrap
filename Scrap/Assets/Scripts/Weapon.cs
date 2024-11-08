@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
 {
     public int damage = 25;
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.transform.gameObject.GetComponent<Health>())
         {

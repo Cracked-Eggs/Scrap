@@ -2998,11 +2998,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b198cdba28e5ac244a8a8bdf09429538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 12
+  walkSpeed: 24
   sprintSpeed: 16
   maxVelocityChange: 10
   airControl: 0.3
-  jumpForce: 12
+  jumpForce: 18
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   groundCheckDistance: 0.75

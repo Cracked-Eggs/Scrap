@@ -12,6 +12,10 @@ TagManager:
   - R_Arm
   - L_Arm
   - Parent
+  - Head2
+  - Head3
+  - Head4
+  - Head5
   layers:
   - Default
   - TransparentFX

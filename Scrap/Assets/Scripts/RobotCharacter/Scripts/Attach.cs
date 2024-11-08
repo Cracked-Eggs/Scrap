@@ -25,10 +25,13 @@ public class Attach : MonoBehaviourPunCallbacks
     public float ogJumpForce;
 
     private bool customGravityActive = true;
-    public GameObject head, torso, r_Leg, l_Leg, r_Arm, l_Arm, parent;
+    public GameObject head,head2,head3,head4,head5, torso, r_Leg, l_Leg, r_Arm, l_Arm, parent;
     private int partsReattachedCount = 0;
-    private int totalParts = 6;
+    private int totalParts = 10;
     private Vector3 referencePosition;
+    public float detachCooldown = 2.0f; // Time in seconds between detachments
+    private float lastDetachTime = -2.0f; // Last time a detach was allowed
+
 
     public bool isDetached = false;
     public bool _isL_ArmDetached = false;
@@ -76,6 +79,10 @@ public class Attach : MonoBehaviourPunCallbacks
         playerCollider.enabled = false;
 
         StoreOriginalTransforms(head);
+        StoreOriginalTransforms(head2);
+        StoreOriginalTransforms(head3);
+        StoreOriginalTransforms(head4);
+        StoreOriginalTransforms(head5);
         StoreOriginalTransforms(torso);
         StoreOriginalTransforms(r_Leg);
         StoreOriginalTransforms(l_Leg);
@@ -129,18 +136,24 @@ public class Attach : MonoBehaviourPunCallbacks
     // Function to detach the head
     public void DetachHead(InputAction.CallbackContext context)
     {
-        if (photonView.IsMine)
+        if (photonView.IsMine && Time.time >= lastDetachTime + detachCooldown)
         {
+            lastDetachTime = Time.time;
             Debug.Log("Working on local ");
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "Head");
+            photonView.RPC("DetachPart_RPC", RpcTarget.All, "Head2");
+            photonView.RPC("DetachPart_RPC", RpcTarget.All, "Head3");
+            photonView.RPC("DetachPart_RPC", RpcTarget.All, "Head4");
+            photonView.RPC("DetachPart_RPC", RpcTarget.All, "Head5");
         }
     }
 
     // Function to detach the torso
     public void DetachTorso(InputAction.CallbackContext context)
     {
-        if (photonView.IsMine)
+        if (photonView.IsMine && Time.time >= lastDetachTime + detachCooldown)
         {
+            lastDetachTime = Time.time;
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "Torso");
         }
     }
@@ -148,8 +161,9 @@ public class Attach : MonoBehaviourPunCallbacks
     // Function to detach the right leg
     public void DetachRightLeg(InputAction.CallbackContext context)
     {
-        if (photonView.IsMine && !_isR_LegDetached)
+        if (photonView.IsMine && !_isR_LegDetached && Time.time >= lastDetachTime + detachCooldown)
         {
+            lastDetachTime = Time.time;
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "RightLeg");
             photonView.RPC("RPC_SetBoolAccordingtoPart", RpcTarget.All, "RightLeg",true);
         }
@@ -158,8 +172,9 @@ public class Attach : MonoBehaviourPunCallbacks
     // Function to detach the left leg
     public void DetachLeftLeg(InputAction.CallbackContext context)
     {
-        if (photonView.IsMine && !_isL_LegDetached)
+        if (photonView.IsMine && !_isL_LegDetached && Time.time >= lastDetachTime + detachCooldown)
         {
+            lastDetachTime = Time.time;
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "LeftLeg");
             photonView.RPC("RPC_SetBoolAccordingtoPart", RpcTarget.All, "LeftLeg", true);
         }
@@ -168,8 +183,9 @@ public class Attach : MonoBehaviourPunCallbacks
     // Function to detach the right arm
     public void DetachRightArm(InputAction.CallbackContext context)
     {
-        if (photonView.IsMine&&!_isR_ArmDetached)
+        if (photonView.IsMine&&!_isR_ArmDetached && Time.time >= lastDetachTime + detachCooldown)
         {
+            lastDetachTime = Time.time;
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "RightArm");
             photonView.RPC("RPC_SetBoolAccordingtoPart", RpcTarget.All, "RightArm", true);
         }
@@ -178,18 +194,20 @@ public class Attach : MonoBehaviourPunCallbacks
     // Function to detach the left arm
     public void DetachLeftArm(InputAction.CallbackContext context)
     {
-        if (photonView.IsMine && !_isL_ArmDetached)
+        if (photonView.IsMine && !_isL_ArmDetached && Time.time >= lastDetachTime + detachCooldown)
         {
+            lastDetachTime = Time.time;
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "LeftArm");
             photonView.RPC("RPC_SetBoolAccordingtoPart", RpcTarget.All, "LeftArm", true);
         }
     }
 
     // Function to shoot the right arm
-    public void ShootRightArm(InputAction.CallbackContext context)
+    public void ShootRightArm(InputAction.CallbackContext context )
     {
-        if (photonView.IsMine && !_isR_ArmDetached)
+        if (photonView.IsMine && !_isR_ArmDetached && Time.time >= lastDetachTime + detachCooldown)
         {
+            lastDetachTime = Time.time;
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "RightArm");
             photonView.RPC("RPC_ShootRightArm_All", RpcTarget.All);
             photonView.RPC("RPC_SetBoolAccordingtoPart", RpcTarget.All, "RightArm", true);
@@ -199,8 +217,9 @@ public class Attach : MonoBehaviourPunCallbacks
     // Function to shoot the left arm
     public void ShootLeftArm(InputAction.CallbackContext context)
     {
-        if (photonView.IsMine && !_isL_ArmDetached)
+        if (photonView.IsMine && !_isL_ArmDetached && Time.time >= lastDetachTime + detachCooldown) 
         {
+            lastDetachTime = Time.time;
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "LeftArm");
             photonView.RPC("RPC_ShootLeftArm_All", RpcTarget.All);
             photonView.RPC("RPC_SetBoolAccordingtoPart", RpcTarget.All, "LeftArm", true);
@@ -260,11 +279,16 @@ public class Attach : MonoBehaviourPunCallbacks
 
     public void On_Detach(InputAction.CallbackContext context)
     {
-        if (!isDetached && photonView.IsMine)
+        if (!isDetached && photonView.IsMine && Time.time >= lastDetachTime + detachCooldown)
         {
+            lastDetachTime = Time.time;
             referencePosition = transform.position;
 
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "Head");
+            photonView.RPC("DetachPart_RPC", RpcTarget.All, "Head2");
+            photonView.RPC("DetachPart_RPC", RpcTarget.All, "Head3");
+            photonView.RPC("DetachPart_RPC", RpcTarget.All, "Head4");
+            photonView.RPC("DetachPart_RPC", RpcTarget.All, "Head5");
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "Torso");
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "RightLeg");
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "LeftLeg");
@@ -340,6 +364,10 @@ public class Attach : MonoBehaviourPunCallbacks
         switch (partName)
         {
             case "Head": return head;
+            case "Head2": return head2;
+            case "Head3": return head3;
+            case "Head4": return head4;
+            case "Head5": return head5;
             case "Torso": return torso;
             case "RightLeg": return r_Leg;
             case "LeftLeg": return l_Leg;
@@ -403,6 +431,10 @@ public class Attach : MonoBehaviourPunCallbacks
     private void ReattachAllParts_RPC()
     {
         StartCoroutine(ShakeAndReattach(head));
+        StartCoroutine(ShakeAndReattach(head2));
+        StartCoroutine(ShakeAndReattach(head3));
+        StartCoroutine(ShakeAndReattach(head4));
+        StartCoroutine(ShakeAndReattach(head5));
         StartCoroutine(ShakeAndReattach(torso));
         StartCoroutine(ShakeAndReattach(r_Leg));
         StartCoroutine(ShakeAndReattach(l_Leg));

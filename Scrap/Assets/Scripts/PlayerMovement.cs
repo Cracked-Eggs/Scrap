@@ -12,12 +12,15 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     public float sprintSpeed = 14f;
     public float maxVelocityChange = 10f;
 
-    [Header("Air & Jumping Controls")] 
-    [Range(0,1f)] public float airControl = 0.5f;
+    [Header("Air & Jumping Controls")]
+    [Range(0, 1f)] public float airControl = 0.5f;
     public float jumpForce = 10f;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     [Space] public float groundCheckDistance = 0.75f;
+
+    [Header("Animation")]
+    public Animator animator; // Reference to Animator component
 
     #region Private Variables
     private Vector2 input;
@@ -32,13 +35,11 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
     void Awake()
     {
-        //if (!photonView.IsMine) return;
         inputSystem = new InputSystem_Actions();  // Initialize input system actions
     }
 
     public override void OnEnable()
     {
-        //if (!photonView.IsMine) return;
         _jumpAction = inputSystem.Player.Jump;  // Bind Jump action
         _jumpAction.performed += OnJumpPerformed;  // Subscribe to jump event
         _jumpAction.Enable();
@@ -46,20 +47,23 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
     public override void OnDisable()
     {
-        //if (!photonView.IsMine) return;
         _jumpAction.Disable();
     }
 
-    // Handle jump input when the jump action is performed
     private void OnJumpPerformed(InputAction.CallbackContext context)
     {
-        jumping = true;  // Set the jumping flag to true when the "A" button is pressed
+        jumping = true;  // Set the jumping flag to true when the jump button is pressed
     }
 
     private void Start()
     {
-        //if (!photonView.IsMine) return;
         rb = GetComponent<Rigidbody>();
+
+        // Ensure the animator is attached and assigned
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
 
     private void Update()
@@ -67,18 +71,23 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         if (!photonView.IsMine) return;
         if (InputManager.LockInput)
         {
-            input = new Vector2(0, 0);
+            input = Vector2.zero;
             sprinting = false;
             jumping = false;
+            animator.SetBool("isMoving", false);  // Set to idle when input is locked
             return;
         }
-        
+
         // Gather input for movement
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         input.Normalize();
 
         // Detect sprinting (controller or keyboard left shift)
         sprinting = Input.GetKey(KeyCode.LeftShift);
+
+        // Update animator based on input magnitude
+        bool isMoving = input.magnitude > 0;
+        animator.SetBool("isMoving", isMoving);
     }
 
     private void OnCollisionStay(Collision other)
@@ -91,7 +100,6 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         if (!photonView.IsMine) return;
         if (grounded)
         {
-            // If grounded, apply movement and check for jump
             if (jumping)
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -104,7 +112,6 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         }
         else
         {
-            // If in the air, apply limited movement
             if (input.magnitude > 0.5f)
             {
                 ApplyMovement(sprinting ? sprintSpeed : walkSpeed, true);

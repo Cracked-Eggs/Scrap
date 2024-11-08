@@ -2558,7 +2558,7 @@ GameObject:
   - component: {fileID: 3508260277183504888}
   - component: {fileID: -1747873899219894199}
   m_Layer: 3
-  m_Name: RP
+  m_Name: NRP
   m_TagString: RedPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

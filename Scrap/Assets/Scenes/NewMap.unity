@@ -7165,9 +7165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9762685f83e00544bf331ad1053d009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPlayerPrefab: {fileID: 2162401590190693216, guid: 196b5fae64f7c5142a0edb37ea9c6a94,
+  redPlayerPrefab: {fileID: 8816103834071147403, guid: 8dce6159d8ec47a49ac3b3a417099533,
     type: 3}
-  bluePlayerPrefab: {fileID: 2162401590190693216, guid: 13d6dcd4b97c99c418d74be2d60a9bbd,
+  bluePlayerPrefab: {fileID: 5142187764680321206, guid: a88cbdb3d35060b4993617fcccc8b1c0,
     type: 3}
   redSpawnPoint: {fileID: 427415017}
   blueSpawnPoint: {fileID: 2042514043}

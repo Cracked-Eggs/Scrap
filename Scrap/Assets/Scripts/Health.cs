@@ -1,25 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
-    public bool isLocalInstance;
-    public int health = 100;
+    public int damage = 25;
+    private PhotonView photonView;
 
-    [PunRPC]
-    public void TakeDamage(int _damage)
+    void Start()
     {
-        health -= _damage;
+        photonView = GetComponent<PhotonView>(); // Get the PhotonView of the weapon owner
+    }
 
-        if (health <= 0)
+    void OnCollisionEnter(Collision other)
+    {
+        PhotonView targetPhotonView = other.transform.gameObject.GetComponent<PhotonView>();
+
+        // Check if the target has a PhotonView and it has a Health component
+        if (targetPhotonView != null && other.transform.gameObject.GetComponent<Health>())
         {
-            if (isLocalInstance)
+            // Make sure the weapon does not damage the player who owns it
+            if (!targetPhotonView.IsMine)
             {
-                RoomManager.Instance.SpawnPlayer();
+                targetPhotonView.RPC("TakeDamage", RpcTarget.AllBuffered, damage);
             }
-            Destroy(gameObject);
         }
     }
 }

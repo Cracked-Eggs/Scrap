@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public int damage = 25;
+   /* public int damage = 25;
     private PhotonView photonView;
 
     void Start()
@@ -28,4 +28,5 @@ public class Weapon : MonoBehaviour
             }
         }
     }
+   */
 }

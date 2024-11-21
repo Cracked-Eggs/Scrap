@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     public Animator animator; // Reference to Animator component
 
     #region Private Variables
-    private Vector2 input;
+    public Vector2 input;
     private Rigidbody rb;
     private InputAction _jumpAction;  // Jump action from Input System
     private InputSystem_Actions inputSystem;

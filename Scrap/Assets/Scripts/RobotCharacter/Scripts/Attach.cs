@@ -18,6 +18,7 @@ public class Attach : MonoBehaviourPunCallbacks
     [SerializeField] public float customGravity = -9.81f;
     [SerializeField] AudioClip magnetRepel;
     AudioSource _audioSource;
+    Animator _animator;
 
     //private Vector2 lookInput;
     //private Vector3 currentRotation;
@@ -72,6 +73,7 @@ public class Attach : MonoBehaviourPunCallbacks
         _rb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<Collider>();
         _audioSource = GetComponent<AudioSource>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -214,6 +216,7 @@ public class Attach : MonoBehaviourPunCallbacks
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "RightArm");
             photonView.RPC("RPC_ShootRightArm_All", RpcTarget.All);
             photonView.RPC("RPC_SetBoolAccordingtoPart", RpcTarget.All, "RightArm", true);
+            _animator.SetTrigger("shootingR");
         }
     }
 
@@ -226,6 +229,7 @@ public class Attach : MonoBehaviourPunCallbacks
             photonView.RPC("DetachPart_RPC", RpcTarget.All, "LeftArm");
             photonView.RPC("RPC_ShootLeftArm_All", RpcTarget.All);
             photonView.RPC("RPC_SetBoolAccordingtoPart", RpcTarget.All, "LeftArm", true);
+            _animator.SetTrigger("shootingL");
         }
     }
     [PunRPC]

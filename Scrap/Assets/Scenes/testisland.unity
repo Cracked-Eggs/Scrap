@@ -460,7 +460,7 @@ MonoBehaviour:
   animator: {fileID: 1949119370}
   animationParameter: idle
   emissionColor: {r: 1, g: 1, b: 1, a: 1}
-  minEmission: 0.5
+  minEmission: 5.44
   maxEmission: 5
   cycleDuration: 2.4
 --- !u!4 &1343373996

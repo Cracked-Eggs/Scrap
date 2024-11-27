@@ -8,18 +8,37 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: redplayertexture
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _NORMALMAP
+=======
+  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _ALPHATEST_ON
+  - _DISABLE_SSR_TRANSPARENT
+  - _EMISSIVE_COLOR_MAP
+  - _MASKMAP
+  - _NORMALMAP
+  - _NORMALMAP_TANGENT_SPACE
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
   m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Opaque
+=======
+  m_CustomRenderQueue: 2475
+  stringTagMap:
+    RenderType: TransparentCutout
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
@@ -38,10 +57,13 @@ Material:
         m_Texture: {fileID: 2800000, guid: e1c080c7d6d65ba4c8f7386f58ac76ec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: e1c080c7d6d65ba4c8f7386f58ac76ec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _BentNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -50,22 +72,29 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: fc8c29ffb8fde05499322c57f87631f7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _CoatMaskMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _DetailMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _DetailMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -78,6 +107,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _EmissiveColorMap:
         m_Texture: {fileID: 2800000, guid: ba8b1ecd123109f44b6e2a8b4742716a, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -102,10 +133,13 @@ Material:
         m_Texture: {fileID: 2800000, guid: c0e0c54aaa847ca48a75e8755d41eb19, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: fc8c29ffb8fde05499322c57f87631f7, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -114,6 +148,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -126,6 +161,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _SpecularColorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -173,7 +210,10 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _AlphaClip: 0
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 1
     - _AlphaCutoffPostpass: 0.5
@@ -183,6 +223,7 @@ Material:
     - _AlphaRemapMax: 1
     - _AlphaRemapMin: 0
     - _AlphaSrcBlend: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _AlphaToMask: 0
     - _Anisotropy: 0
     - _Blend: 0
@@ -193,13 +234,22 @@ Material:
     - _ClearCoatSmoothness: 0
     - _CoatMask: 0
     - _Cull: 2
+=======
+    - _Anisotropy: 0
+    - _BlendMode: 0
+    - _CoatMask: 0
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
     - _DepthOffsetEnable: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _DetailAlbedoMapScale: 1
     - _DetailAlbedoScale: 1
     - _DetailNormalMapScale: 1
+=======
+    - _DetailAlbedoScale: 1
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _DetailNormalScale: 1
     - _DetailSmoothnessScale: 1
     - _DiffusionProfile: 0
@@ -211,7 +261,10 @@ Material:
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 1
     - _DstBlend: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _DstBlendAlpha: 0
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
@@ -220,11 +273,14 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossinessSource: 0
     - _GlossyReflections: 0
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -247,13 +303,17 @@ Material:
     - _NormalScale: 1
     - _ObjectSpaceUVMapping: 0
     - _ObjectSpaceUVMappingEmissive: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _OcclusionStrength: 1
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _OpaqueCullMode: 2
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
     - _PPDMinSamples: 5
     - _PPDPrimitiveLength: 1
     - _PPDPrimitiveWidth: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _RayTracing: 0
@@ -274,6 +334,19 @@ Material:
     - _SpecularOcclusionMode: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
+=======
+    - _RayTracing: 0
+    - _ReceivesSSR: 1
+    - _ReceivesSSRTransparent: 0
+    - _RefractionModel: 0
+    - _Smoothness: 0.5
+    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMin: 0
+    - _SpecularAAScreenSpaceVariance: 0.1
+    - _SpecularAAThreshold: 0.2
+    - _SpecularOcclusionMode: 1
+    - _SrcBlend: 1
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _StencilRef: 0
     - _StencilRefDepth: 8
     - _StencilRefGBuffer: 10
@@ -284,7 +357,10 @@ Material:
     - _StencilWriteMaskMV: 41
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _Surface: 0
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _SurfaceType: 0
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
@@ -303,7 +379,10 @@ Material:
     - _UVEmissive: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _WorkflowMode: 1
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 3
     - _ZTestTransparent: 4
@@ -319,7 +398,10 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
@@ -343,6 +425,7 @@ MonoBehaviour:
   hdPluginSubTargetMaterialVersions:
     m_Keys: []
     m_Values: 
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/redplayertexture.mat
 --- !u!114 &7330299501360669085
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -356,3 +439,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 7
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/redplayertexture.mat

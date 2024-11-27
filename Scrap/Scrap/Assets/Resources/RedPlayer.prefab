@@ -171,10 +171,16 @@ GameObject:
   - component: {fileID: 5517994750525976853}
   - component: {fileID: 7083322990159308458}
   - component: {fileID: 6820849996947997085}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   - component: {fileID: 391179839183536737}
   m_Layer: 6
   m_Name: Arms_Left
   m_TagString: L_Arm
+=======
+  m_Layer: 0
+  m_Name: Arms_Left
+  m_TagString: Untagged
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,6 +301,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Size: {x: 1.5813901, y: 1.3044274, z: 1.8167987}
   m_Center: {x: -0.3814994, y: -0.027900996, z: -0.3254627}
 --- !u!114 &391179839183536737
@@ -315,6 +322,10 @@ MonoBehaviour:
   - _BOOM
   - _POW
   LocalPhotonView: {fileID: 1353656235600279086}
+=======
+  m_Size: {x: 1.8972511, y: 1.3044274, z: 2.2489648}
+  m_Center: {x: -0.22356892, y: -0.027900996, z: -0.10937954}
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
 --- !u!1 &1142634202187073885
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,9 +368,15 @@ GameObject:
   - component: {fileID: 6524279406238284930}
   - component: {fileID: 3327114115360913116}
   - component: {fileID: 966520598158891722}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Layer: 6
   m_Name: Legs_Left
   m_TagString: L_Leg
+=======
+  m_Layer: 0
+  m_Name: Legs_Left
+  m_TagString: Untagged
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -601,10 +618,16 @@ GameObject:
   - component: {fileID: 533941274159393639}
   - component: {fileID: 6809773446786534253}
   - component: {fileID: 8854860581076922852}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   - component: {fileID: 8971233407925388315}
   m_Layer: 6
   m_Name: Arms_Right
   m_TagString: R_Arm
+=======
+  m_Layer: 0
+  m_Name: Arms_Right
+  m_TagString: Untagged
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -725,6 +748,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Size: {x: 1.500707, y: 1.355597, z: 1.7381053}
   m_Center: {x: 0.4112187, y: -0.025616467, z: -0.26918256}
 --- !u!114 &8971233407925388315
@@ -745,6 +769,10 @@ MonoBehaviour:
   - _BOOM
   - _POW
   LocalPhotonView: {fileID: 1353656235600279086}
+=======
+  m_Size: {x: 1.7676504, y: 1.355597, z: 2.1581683}
+  m_Center: {x: 0.2290957, y: -0.025616469, z: -0.059150938}
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
 --- !u!1 &1700245601192563569
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,9 +816,15 @@ GameObject:
   - component: {fileID: 3458803093821890498}
   - component: {fileID: 12707964533693497}
   - component: {fileID: 4465883605579934629}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Layer: 6
   m_Name: Design 1_Inner_Face.002
   m_TagString: Head2
+=======
+  m_Layer: 0
+  m_Name: Design 1_Inner_Face.002
+  m_TagString: Untagged
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -830,7 +864,11 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   - {fileID: 2100000, guid: e5b3cee0bd1ff2c42a9828244178347e, type: 2}
+=======
+  - {fileID: -9103484930961366303, guid: 6397b989b17a5074b936be2bc9b8453e, type: 3}
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1184,9 +1222,15 @@ GameObject:
   - component: {fileID: 7713998785913756235}
   - component: {fileID: 2669937925804425552}
   - component: {fileID: 990311375517630691}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Layer: 6
   m_Name: Design 1_Outer_Glass_Screen.002
   m_TagString: Head4
+=======
+  m_Layer: 0
+  m_Name: Design 1_Outer_Glass_Screen.002
+  m_TagString: Untagged
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1226,7 +1270,11 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   - {fileID: 2100000, guid: e5b3cee0bd1ff2c42a9828244178347e, type: 2}
+=======
+  - {fileID: 2100000, guid: 305715ab535c7ae419e2bfeddc83fc7c, type: 2}
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1454,9 +1502,15 @@ GameObject:
   - component: {fileID: 1999269279021518640}
   - component: {fileID: 5542833059249700629}
   - component: {fileID: 1456774995559610769}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Layer: 6
   m_Name: Body.Torso
   m_TagString: Torso
+=======
+  m_Layer: 0
+  m_Name: Body.Torso
+  m_TagString: Untagged
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1690,9 +1744,15 @@ GameObject:
   - component: {fileID: 7044454654422219641}
   - component: {fileID: 9000825466058283362}
   - component: {fileID: 1197226804002317917}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Layer: 6
   m_Name: Design 1_Outer_Face_Filter.002
   m_TagString: Head3
+=======
+  m_Layer: 0
+  m_Name: Design 1_Outer_Face_Filter.002
+  m_TagString: Untagged
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1732,7 +1792,11 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   - {fileID: 2100000, guid: e5b3cee0bd1ff2c42a9828244178347e, type: 2}
+=======
+  - {fileID: -9103484930961366303, guid: 6397b989b17a5074b936be2bc9b8453e, type: 3}
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1923,9 +1987,15 @@ GameObject:
   - component: {fileID: 5657026858635834471}
   - component: {fileID: 7884215091150900036}
   - component: {fileID: 921067288309576829}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Layer: 6
   m_Name: Design 1_Head.001
   m_TagString: Head
+=======
+  m_Layer: 0
+  m_Name: Design 1_Head.001
+  m_TagString: Untagged
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2090,9 +2160,15 @@ GameObject:
   - component: {fileID: 7550926511123127465}
   - component: {fileID: 5045833506671929398}
   - component: {fileID: 80051919518689339}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Layer: 6
   m_Name: Face
   m_TagString: Head5
+=======
+  m_Layer: 0
+  m_Name: Face
+  m_TagString: Untagged
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2132,7 +2208,11 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   - {fileID: 2100000, guid: e5b3cee0bd1ff2c42a9828244178347e, type: 2}
+=======
+  - {fileID: -9103484930961366303, guid: 6397b989b17a5074b936be2bc9b8453e, type: 3}
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2425,6 +2505,7 @@ MonoBehaviour:
   sprintSpeed: 16
   maxVelocityChange: 10
   airControl: 0.3
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   jumpForce: 20
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
@@ -2434,6 +2515,13 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+=======
+  jumpForce: 18
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+  groundCheckDistance: 0.75
+  animator: {fileID: 7136779284411959216}
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
 --- !u!114 &1353656235600279086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2520,8 +2608,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocalInstance: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   maxHealth: 100
   HealthSlider: {fileID: 585218077387767521}
+=======
+  health: 100
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
 --- !u!95 &7136779284411959216
 Animator:
   serializedVersion: 5
@@ -2758,9 +2850,15 @@ GameObject:
   - component: {fileID: 5799364748877332971}
   - component: {fileID: 2183164043521808085}
   - component: {fileID: 1951132949929839741}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Layer: 6
   m_Name: Legs_Right
   m_TagString: R_Leg
+=======
+  m_Layer: 0
+  m_Name: Legs_Right
+  m_TagString: Untagged
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3394,7 +3492,11 @@ GameObject:
   - component: {fileID: 3280193659188448315}
   - component: {fileID: 5448314076723834647}
   - component: {fileID: 5643225551238169880}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   - component: {fileID: 7327414460360963030}
+=======
+  - component: {fileID: 5307060927170880319}
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -3493,7 +3595,11 @@ MonoBehaviour:
   lockCursor: 1
   sensitivity: 2
   character: {fileID: 5142187764680321206}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
 --- !u!114 &7327414460360963030
+=======
+--- !u!114 &5307060927170880319
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3502,6 +3608,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8594670486762772476}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -3537,6 +3644,128 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+=======
+  m_Script: {fileID: 11500000, guid: 23c1ce4fb46143f46bc5cb5224c934f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearColorMode: 0
+  backgroundColorHDR: {r: 0.025, g: 0.07, b: 0.19, a: 0}
+  clearDepth: 1
+  volumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  volumeAnchorOverride: {fileID: 0}
+  antialiasing: 0
+  SMAAQuality: 2
+  dithering: 0
+  stopNaNs: 0
+  taaSharpenStrength: 0.5
+  TAAQuality: 1
+  taaHistorySharpening: 0.35
+  taaAntiFlicker: 0.5
+  taaMotionVectorRejection: 0
+  taaAntiHistoryRinging: 0
+  taaBaseBlendFactor: 0.875
+  taaJitterScale: 1
+  physicalParameters:
+    m_Iso: 200
+    m_ShutterSpeed: 0.005
+    m_Aperture: 16
+    m_FocusDistance: 10
+    m_BladeCount: 5
+    m_Curvature: {x: 2, y: 11}
+    m_BarrelClipping: 0.25
+    m_Anamorphism: 0
+  flipYMode: 0
+  xrRendering: 1
+  fullscreenPassthrough: 0
+  allowDynamicResolution: 0
+  customRenderingSettings: 0
+  invertFaceCulling: 0
+  probeLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  hasPersistentHistory: 0
+  screenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  screenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  allowDeepLearningSuperSampling: 1
+  deepLearningSuperSamplingUseCustomQualitySettings: 0
+  deepLearningSuperSamplingQuality: 0
+  deepLearningSuperSamplingUseCustomAttributes: 0
+  deepLearningSuperSamplingUseOptimalSettings: 1
+  deepLearningSuperSamplingSharpening: 0
+  fsrOverrideSharpness: 0
+  fsrSharpness: 0.92
+  exposureTarget: {fileID: 0}
+  materialMipBias: 0
+  m_RenderingPathCustomFrameSettings:
+    bitDatas:
+      data1: 140666587840333
+      data2: 13763000512783810584
+    lodBias: 1
+    lodBiasMode: 0
+    lodBiasQualityLevel: 0
+    maximumLODLevel: 0
+    maximumLODLevelMode: 0
+    maximumLODLevelQualityLevel: 0
+    sssQualityMode: 0
+    sssQualityLevel: 0
+    sssCustomSampleBudget: 20
+    msaaMode: 1
+    materialQuality: 0
+  renderingPathCustomFrameSettingsOverrideMask:
+    mask:
+      data1: 0
+      data2: 0
+  defaultFrameSettings: 0
+  m_Version: 9
+  m_ObsoleteRenderingPath: 0
+  m_ObsoleteFrameSettings:
+    overrides: 0
+    enableShadow: 0
+    enableContactShadows: 0
+    enableShadowMask: 0
+    enableSSR: 0
+    enableSSAO: 0
+    enableSubsurfaceScattering: 0
+    enableTransmission: 0
+    enableAtmosphericScattering: 0
+    enableVolumetrics: 0
+    enableReprojectionForVolumetrics: 0
+    enableLightLayers: 0
+    enableExposureControl: 1
+    diffuseGlobalDimmer: 0
+    specularGlobalDimmer: 0
+    shaderLitMode: 0
+    enableDepthPrepassWithDeferredRendering: 0
+    enableTransparentPrepass: 0
+    enableMotionVectors: 0
+    enableObjectMotionVectors: 0
+    enableDecals: 0
+    enableRoughRefraction: 0
+    enableTransparentPostpass: 0
+    enableDistortion: 0
+    enablePostprocess: 0
+    enableOpaqueObjects: 0
+    enableTransparentObjects: 0
+    enableRealtimePlanarReflection: 0
+    enableMSAA: 0
+    enableAsyncCompute: 0
+    runLightListAsync: 0
+    runSSRAsync: 0
+    runSSAOAsync: 0
+    runContactShadowsAsync: 0
+    runVolumeVoxelizationAsync: 0
+    lightLoopSettings:
+      overrides: 0
+      enableDeferredTileAndCluster: 0
+      enableComputeLightEvaluation: 0
+      enableComputeLightVariants: 0
+      enableComputeMaterialVariants: 0
+      enableFptlForForwardOpaque: 0
+      enableBigTilePrepass: 0
+      isFptlEnabled: 0
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
 --- !u!1 &8630064201830633952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3783,6 +4012,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a746fe121ed96084f8b17b96436d6aea, type: 3}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/RedPlayer.prefab
 --- !u!114 &585218077387767521 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2207731695848430541, guid: a746fe121ed96084f8b17b96436d6aea,
@@ -3795,6 +4025,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/RedPlayer.prefab
 --- !u!224 &2281861787051802054 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 654888706183633130, guid: a746fe121ed96084f8b17b96436d6aea,

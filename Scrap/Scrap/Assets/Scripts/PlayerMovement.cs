@@ -59,7 +59,11 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+<<<<<<< HEAD:Scrap/Scrap/Assets/Scripts/PlayerMovement.cs
         playerCollider = GetComponent<CapsuleCollider>();
+=======
+
+>>>>>>> origin/CommitURP:Scrap/Assets/Scripts/PlayerMovement.cs
         // Ensure the animator is attached and assigned
         if (animator == null)
         {
@@ -89,6 +93,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         // Update animator based on input magnitude
         bool isMoving = input.magnitude > 0;
         animator.SetBool("isMoving", isMoving);
+<<<<<<< HEAD:Scrap/Scrap/Assets/Scripts/PlayerMovement.cs
     }
     private void CheckGrounded()
     {
@@ -120,6 +125,8 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
         // Debug visualization (optional)
         Debug.DrawRay(rayOrigin, Vector3.down * 6.5f, grounded ? Color.yellow : Color.red);
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Scripts/PlayerMovement.cs
     }
 
     private void OnCollisionStay(Collision other)

@@ -65,7 +65,10 @@ MonoBehaviour:
   - CheckNicknamesAndStartTimer
   - Red_Winner
   - SyncTimer
+<<<<<<< HEAD:Scrap/Scrap/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset
   - setisdead
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

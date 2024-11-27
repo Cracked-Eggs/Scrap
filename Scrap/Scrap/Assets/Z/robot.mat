@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
 --- !u!114 &-2266942702908704521
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -13,6 +14,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 7
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -21,6 +24,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: robot
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
   m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -32,6 +36,26 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Opaque
+=======
+  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _ALPHATEST_ON
+  - _DISABLE_SSR_TRANSPARENT
+  - _EMISSIVE_COLOR_MAP
+  - _MASKMAP
+  - _NORMALMAP
+  - _NORMALMAP_TANGENT_SPACE
+  m_InvalidKeywords:
+  - _AXF_BRDF_TYPE_SVBRDF
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2475
+  stringTagMap:
+    RenderType: TransparentCutout
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
@@ -50,10 +74,13 @@ Material:
         m_Texture: {fileID: 2800000, guid: 7521c3b5c01d400419d4a44d908dfc78, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _BentNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -62,10 +89,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _CoatMaskMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -74,10 +104,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _EmissiveColorMap:
         m_Texture: {fileID: 2800000, guid: bcd92ccc344ca2d43823cb9b64deba22, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -95,7 +128,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
         m_Texture: {fileID: 0}
+=======
+        m_Texture: {fileID: 2800000, guid: 7521c3b5c01d400419d4a44d908dfc78, type: 3}
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -110,10 +147,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _SpecularColorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -161,7 +201,10 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _AlphaClip: 0
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 1
     - _AlphaCutoffPostpass: 0.5
@@ -171,6 +214,7 @@ Material:
     - _AlphaRemapMax: 1
     - _AlphaRemapMin: 0
     - _AlphaSrcBlend: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _AlphaToMask: 0
     - _Anisotropy: 0
     - _Blend: 0
@@ -179,6 +223,11 @@ Material:
     - _BumpScale: 1
     - _CoatMask: 0
     - _Cull: 2
+=======
+    - _Anisotropy: 0
+    - _BlendMode: 0
+    - _CoatMask: 0
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
@@ -195,7 +244,10 @@ Material:
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 1
     - _DstBlend: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _DstBlendAlpha: 0
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
@@ -204,7 +256,10 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _GlossinessSource: 0
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -233,6 +288,7 @@ Material:
     - _PPDMinSamples: 5
     - _PPDPrimitiveLength: 1
     - _PPDPrimitiveWidth: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _QueueOffset: 0
     - _RayTracing: 0
     - _ReceiveShadows: 1
@@ -251,6 +307,19 @@ Material:
     - _SpecularOcclusionMode: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
+=======
+    - _RayTracing: 0
+    - _ReceivesSSR: 1
+    - _ReceivesSSRTransparent: 0
+    - _RefractionModel: 0
+    - _Smoothness: 0.5
+    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMin: 0
+    - _SpecularAAScreenSpaceVariance: 0.1
+    - _SpecularAAThreshold: 0.2
+    - _SpecularOcclusionMode: 1
+    - _SrcBlend: 1
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _StencilRef: 0
     - _StencilRefDepth: 8
     - _StencilRefGBuffer: 10
@@ -261,7 +330,10 @@ Material:
     - _StencilWriteMaskMV: 41
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _Surface: 0
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _SurfaceType: 0
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
@@ -295,7 +367,10 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robot.mat
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robot.mat
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}

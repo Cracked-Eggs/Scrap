@@ -28,7 +28,10 @@ public class RoomManager_KothMode : MonoBehaviourPunCallbacks
     private float countdownTime = 5f;
     public TMPro.TMP_InputField nicknameinput;
     int playerIndex;
+<<<<<<< HEAD:Scrap/Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
     public bool isdead;
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
     public void ChangeNickname(string _name)
     {
         name = _name;
@@ -38,7 +41,11 @@ public class RoomManager_KothMode : MonoBehaviourPunCallbacks
     void Awake()
     {
         Instance = this;
+<<<<<<< HEAD:Scrap/Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
         isdead = false;
+=======
+
+>>>>>>> origin/CommitURP:Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
         if (!PhotonNetwork.IsConnectedAndReady)
             SceneManager.LoadScene(0);
 
@@ -165,7 +172,11 @@ public class RoomManager_KothMode : MonoBehaviourPunCallbacks
         {
             _player.GetComponent<PlayerSetup>().IsLocalPlayer();
             _player.GetComponent<PhotonView>().RPC("SetNickname", RpcTarget.AllBufferedViaServer, name);
+<<<<<<< HEAD:Scrap/Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
             _player.GetComponent<PlayerHealth_Koth>().isLocalInstance = true;
+=======
+            //_player.GetComponent<Health>().isLocalInstance = true;
+>>>>>>> origin/CommitURP:Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
         }
     }
     public void Respawn_Blue()
@@ -176,7 +187,11 @@ public class RoomManager_KothMode : MonoBehaviourPunCallbacks
         {
             _player.GetComponent<PlayerSetup>().IsLocalPlayer();
             _player.GetComponent<PhotonView>().RPC("SetNickname", RpcTarget.AllBufferedViaServer, name);
+<<<<<<< HEAD:Scrap/Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
             _player.GetComponent<PlayerHealth_Koth>().isLocalInstance = true;
+=======
+           // _player.GetComponent<Health>().isLocalInstance = true;
+>>>>>>> origin/CommitURP:Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
         }
     }
     public override void OnJoinedRoom()
@@ -208,11 +223,14 @@ public class RoomManager_KothMode : MonoBehaviourPunCallbacks
             capPointManager.StartKOTH();
         }
     }
+<<<<<<< HEAD:Scrap/Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
     public void BacktoMainDead()
     {
         //isdead = true;
         PhotonNetwork.LeaveRoom();
     }
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
     public void BacktoMain()
     {
         PhotonNetwork.LeaveRoom();
@@ -225,17 +243,24 @@ public class RoomManager_KothMode : MonoBehaviourPunCallbacks
     {
         base.OnPlayerLeftRoom(otherPlayer);
         CapPointManager capPointManager = FindObjectOfType<CapPointManager>();
+<<<<<<< HEAD:Scrap/Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
         if (capPointManager != null&& !isdead)
+=======
+        if (capPointManager != null)
+>>>>>>> origin/CommitURP:Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
         {
             capPointManager.GameCompletedtxt.text = "Other Player Leave the Game";
             capPointManager.GameCompleted.SetActive(true);
             Time.timeScale = 1;
         }
+<<<<<<< HEAD:Scrap/Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
         //else if(capPointManager != null && isdead)
         //{
         //    capPointManager.GameCompletedtxt.text = "Other Player Died You Won";
         //    capPointManager.GameCompleted.SetActive(true);
         //    Time.timeScale = 1;
         //}
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Scripts/KOTH Mode Related Scripts/RoomManager_KothMode.cs
     }
 }

@@ -16,6 +16,22 @@ MonoBehaviour:
   hdPluginSubTargetMaterialVersions:
     m_Keys: []
     m_Values: 
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
+=======
+--- !u!114 &-1924122010888132586
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -24,23 +40,43 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: robotglass
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
   m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
+=======
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _SURFACE_TYPE_TRANSPARENT
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
   m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Opaque
+=======
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
   - RayTracingPrepass
   - MOTIONVECTORS
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
+=======
+  - DepthOnly
+  - SHADOWCASTER
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -73,10 +109,28 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
+=======
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _DetailMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
+=======
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -105,6 +159,13 @@ Material:
         m_Texture: {fileID: 2800000, guid: a1d881ffeaa5e954d8298e89425cc448, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
+=======
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: 7f4bcccb42460fe438258f69d25626d5, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -113,6 +174,17 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
+=======
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -180,13 +252,24 @@ Material:
     - _BlendMode: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
+=======
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _CoatMask: 0
     - _Cull: 2
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
     - _DepthOffsetEnable: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
     - _DetailAlbedoScale: 1
+=======
+    - _DetailAlbedoMapScale: 1
+    - _DetailAlbedoScale: 1
+    - _DetailNormalMapScale: 1
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _DetailNormalScale: 1
     - _DetailSmoothnessScale: 1
     - _DiffusionProfile: 0
@@ -197,8 +280,13 @@ Material:
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+=======
+    - _DstBlend: 10
+    - _DstBlendAlpha: 10
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
@@ -207,7 +295,14 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
     - _GlossinessSource: 0
+=======
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -230,24 +325,39 @@ Material:
     - _NormalScale: 1
     - _ObjectSpaceUVMapping: 0
     - _ObjectSpaceUVMappingEmissive: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
+=======
+    - _OcclusionStrength: 1
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _OpaqueCullMode: 2
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
     - _PPDMinSamples: 5
     - _PPDPrimitiveLength: 1
     - _PPDPrimitiveWidth: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
+=======
+    - _Parallax: 0.005
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _QueueOffset: 0
     - _RayTracing: 0
     - _ReceiveShadows: 1
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
     - _Shininess: 0
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SmoothnessSource: 0
     - _SpecSource: 0
+=======
+    - _Smoothness: 0.5
+    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMin: 0
+    - _SmoothnessTextureChannel: 0
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
     - _SpecularHighlights: 1
@@ -264,7 +374,11 @@ Material:
     - _StencilWriteMaskMV: 41
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
     - _Surface: 0
+=======
+    - _Surface: 1
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _SurfaceType: 1
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
@@ -283,10 +397,18 @@ Material:
     - _UVEmissive: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 3
     - _ZTestTransparent: 4
     - _ZWrite: 1
+=======
+    - _WorkflowMode: 1
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 3
+    - _ZTestTransparent: 4
+    - _ZWrite: 0
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
@@ -298,7 +420,11 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+=======
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
@@ -306,6 +432,7 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+<<<<<<< HEAD:Scrap/Scrap/Assets/Z/robotglass.mat
 --- !u!114 &9140359442775364109
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -319,3 +446,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 7
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Z/robotglass.mat

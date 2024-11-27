@@ -2002,6 +2002,10 @@ MonoBehaviour:
   lowJumpMultiplier: 2
   groundCheckDistance: 0.75
   animator: {fileID: 5513661652491486139}
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/Player2.prefab
+=======
+  input: {x: 0, y: 0}
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/Player2.prefab
 --- !u!114 &4811785298205811738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2071,8 +2075,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a6b199fe8cd07448d9c6b8f7c86c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:Scrap/Scrap/Assets/Resources/Player2.prefab
   isLocalInstance: 0
   health: 100
+=======
+>>>>>>> origin/CommitURP:Scrap/Assets/Resources/Player2.prefab
 --- !u!114 &7199238760680341633
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Photon.Realtime;
@@ -11,6 +10,8 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     public float walkSpeed = 8f;
     public float sprintSpeed = 14f;
     public float maxVelocityChange = 10f;
+    public float acceleration = 5f;  // Speed at which we accelerate
+    public float deceleration = 10f; // Speed at which we decelerate
 
     [Header("Air & Jumping Controls")]
     [Range(0, 1f)] public float airControl = 0.5f;
@@ -31,9 +32,11 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     private bool jumping;
     private bool grounded;
     private Vector3 lastTargetVelocity;
+    private float currentSpeed;  // Current movement speed, gradually increasing or decreasing
     #endregion
     public LayerMask groundLayer; // Assign ground layer in the inspector
     private CapsuleCollider playerCollider;
+
     void Awake()
     {
         inputSystem = new InputSystem_Actions();  // Initialize input system actions
@@ -70,6 +73,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     private void Update()
     {
         if (!photonView.IsMine) return;
+
         if (InputManager.LockInput)
         {
             input = Vector2.zero;
@@ -86,10 +90,37 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         // Detect sprinting (controller or keyboard left shift)
         sprinting = Input.GetKey(KeyCode.LeftShift);
 
-        // Update animator based on input magnitude
-        bool isMoving = input.magnitude > 0;
-        animator.SetBool("isMoving", isMoving);
+        // Update the target speed
+        float targetSpeed = 0f;
+
+        if (input.magnitude > 0) // Moving
+        {
+            if (sprinting)
+            {
+                targetSpeed = sprintSpeed;
+            }
+            else
+            {
+                targetSpeed = walkSpeed;
+            }
+
+            animator.SetBool("isMoving", true);  // Player is moving
+        }
+        else // Idle
+        {
+            animator.SetBool("isMoving", false);  // Player is idle
+        }
+
+        // Gradually change the current speed towards the target speed
+        currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, (targetSpeed > currentSpeed ? acceleration : deceleration) * Time.deltaTime);
+
+        // Normalize the current speed for the Animator (0 to 1 range)
+        float normalizedSpeed = Mathf.InverseLerp(0f, sprintSpeed, currentSpeed);
+
+        // Set the moveSpeed parameter in the Animator to drive the blend tree
+        animator.SetFloat("MoveSpeed", normalizedSpeed);
     }
+
     private void CheckGrounded()
     {
         RaycastHit hit;
@@ -97,42 +128,23 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
         if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 6.5f, groundLayer))
         {
-            // Check the angle of the surface normal
             float angle = Vector3.Angle(hit.normal, Vector3.up);
-
-            // Consider the player grounded if the angle is less than a certain threshold (e.g., 45 degrees)
-            if (angle < 45f)
-            {
-                //Debug.Log("Working");
-                grounded = true;
-            }
-            else
-            {
-                //Debug.Log("Niot Working");
-                grounded = false;
-            }
+            grounded = angle < 45f;
         }
         else
         {
-            //Debug.Log("Niot 222 Working");
             grounded = false;
         }
 
-        // Debug visualization (optional)
         Debug.DrawRay(rayOrigin, Vector3.down * 6.5f, grounded ? Color.yellow : Color.red);
-    }
-
-    private void OnCollisionStay(Collision other)
-    {
-       
-      //  grounded = true;
-       
     }
 
     private void FixedUpdate()
     {
         if (!photonView.IsMine) return;
+
         CheckGrounded();
+
         if (grounded)
         {
             if (jumping)
@@ -142,14 +154,14 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
             }
             else
             {
-                ApplyMovement(sprinting ? sprintSpeed : walkSpeed, false);
+                ApplyMovement(currentSpeed, false);
             }
         }
         else
         {
             if (input.magnitude > 0.5f)
             {
-                ApplyMovement(sprinting ? sprintSpeed : walkSpeed, true);
+                ApplyMovement(currentSpeed, true);
             }
         }
 
@@ -168,10 +180,8 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
         if (_inAir)
         {
-            velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange * airControl,
-                maxVelocityChange * airControl);
-            velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange * airControl,
-                maxVelocityChange * airControl);
+            velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange * airControl, maxVelocityChange * airControl);
+            velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange * airControl, maxVelocityChange * airControl);
         }
         else
         {

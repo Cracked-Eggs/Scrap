@@ -4,7 +4,7 @@ public class BreathingEmission : MonoBehaviour
 {
     public Material targetMaterial; // Material to control
     public Animator animator; // Reference to the Animator
-    public string animationParameter = "Idle"; // Animator parameter name
+    public string animationParameter = "idle"; // Animator parameter name
     public Color emissionColor = Color.white; // Base emission color
     public float minEmission = 0.5f; // Minimum emission intensity
     public float maxEmission = 2.0f; // Maximum emission intensity

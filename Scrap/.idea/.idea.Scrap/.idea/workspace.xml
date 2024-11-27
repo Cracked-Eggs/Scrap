@@ -5,16 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c53bc5ff-a69f-476f-9ea9-a893f20bcf53" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrap/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BluePlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BluePlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RedPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RedPlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RedPlayer.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RedPlayer.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrap/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/4x4TileFloorGB.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/4x4TileFloorGB.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/4x4x3RampGB.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/4x4x3RampGB.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/BrokenWindow.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/BrokenWindow.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ChainsCreation.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ChainsCreation.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ControlPanelGB.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ControlPanelGB.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ConveyorBeltGB (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/ConveyorBeltGB (1).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/F_S.A.O16SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/F_S.A.O16SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Nuts&amp;Bolts.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Nuts&amp;Bolts.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Oswald-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Oswald-VariableFont_wght.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/RustedBeamGB.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/RustedBeamGB.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/WhiteCircle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/WhiteCircle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/WindowShards.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/WindowShards.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/WiresCreation.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/WiresCreation.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/cooltext468024872932569.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/cooltext468024872932569.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/stair 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/stair 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/stair.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/stair.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Metal_Conveyer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Metal_Conveyer.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FactoryMaterials/Ceiling.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FactoryMaterials/Ceiling.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FactoryMaterials/Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FactoryMaterials/Floor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Material.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z/mod.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Z/mod.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z/robot.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Z/robot.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z/robotglass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Z/robotglass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,25 +70,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;man&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\TheRe\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\TheRe\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\TheRe\\AppData\\Local\\Symbols\\src&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "HDRPtoURP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Downloads/MP3FINAL\PartyGame.exe" />
@@ -113,6 +140,7 @@
       <workItem from="1731082688998" duration="4791000" />
       <workItem from="1731098025301" duration="136000" />
       <workItem from="1731098184915" duration="909000" />
+      <workItem from="1732736130572" duration="17000" />
     </task>
     <servers />
   </component>
@@ -127,6 +155,7 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

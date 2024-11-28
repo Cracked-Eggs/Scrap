@@ -1863,7 +1863,7 @@ MonoBehaviour:
   sprintSpeed: 16
   maxVelocityChange: 10
   acceleration: 5
-  deceleration: 10
+  deceleration: 60
   airControl: 0.3
   jumpForce: 20
   fallMultiplier: 2.5

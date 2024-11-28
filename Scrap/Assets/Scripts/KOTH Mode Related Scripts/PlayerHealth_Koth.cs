@@ -9,10 +9,12 @@ public class PlayerHealth_Koth : MonoBehaviourPunCallbacks
     [SerializeField] private int maxHealth = 100;
     private int currentHealth;
     public Slider HealthSlider;
+    public Animator animator;
 
     private void Start()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
     }
     [PunRPC]
     public void TakeDamage(int _damage, int targetViewID)
@@ -20,6 +22,7 @@ public class PlayerHealth_Koth : MonoBehaviourPunCallbacks
         if (photonView.ViewID == targetViewID)
         {
             currentHealth -= _damage;
+            animator.SetTrigger("takedmg");
             HealthSlider.value = currentHealth;
             if (currentHealth <= 0)
             {
@@ -45,6 +48,7 @@ public class PlayerHealth_Koth : MonoBehaviourPunCallbacks
     IEnumerator Respawn_aftersomeseconds(string tag)
     {
         yield return new WaitForSeconds(2f);
+        animator.SetBool("isDead", true);
         if(tag== "RedPlayer")
         {
             RoomManager_KothMode.Instance.Respawn_Red();

@@ -202,6 +202,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cornerplatform [shortened]
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cbd28be683f2a9640aea49f0698f645c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -507,6 +512,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LShapePlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b8d4195d221803f4abe902b8daffaf91,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1456,6 +1466,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairs60Deg (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4a2190981dd04f84e98ccc6acff3ecd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1924,6 +1939,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LShapePlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b8d4195d221803f4abe902b8daffaf91,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2228,7 +2248,7 @@ GameObject:
   - component: {fileID: 219953105}
   - component: {fileID: 219953104}
   - component: {fileID: 219953103}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3878,7 +3898,7 @@ GameObject:
   m_Layer: 0
   m_Name: RedPlayer
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3891,7 +3911,7 @@ Transform:
   m_GameObject: {fileID: 427415016}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.7, y: 5.42, z: -107.2}
+  m_LocalPosition: {x: 18.93, y: -3.59, z: -13.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3949,8 +3969,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.8942456, y: 1.1723212, z: 4.264889}
-  m_Center: {x: 0.3883929, y: 0.10999999, z: -0.13084492}
+  m_Size: {x: 2.8088894, y: 1.1723212, z: 2.3653698}
+  m_Center: {x: 0.65052485, y: 0.1100003, z: -1.0806038}
 --- !u!23 &434246619
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4010,7 +4030,7 @@ Transform:
   m_GameObject: {fileID: 434246616}
   serializedVersion: 2
   m_LocalRotation: {x: 0.007700532, y: -0.015701013, z: 0.012287174, w: 0.99977165}
-  m_LocalPosition: {x: 46.03209, y: 60.5, z: -186.64214}
+  m_LocalPosition: {x: 46.03209, y: 60.5, z: -115.4}
   m_LocalScale: {x: 16.39296, y: 16.39296, z: 16.39296}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4774,8 +4794,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.634336, y: 0.80138427, z: 5.027333}
-  m_Center: {x: 0.01975268, y: -0.09, z: 0.49539697}
+  m_Size: {x: 4.2573166, y: 0.80138427, z: 3.7221277}
+  m_Center: {x: -0.100237615, y: -0.09, z: 1.1480019}
 --- !u!23 &552058642
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4835,7 +4855,7 @@ Transform:
   m_GameObject: {fileID: 552058639}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.02095093, z: -0, w: -0.9997805}
-  m_LocalPosition: {x: -51.6, y: 54.9, z: 24.6}
+  m_LocalPosition: {x: 7.6, y: 54.9, z: -15.1}
   m_LocalScale: {x: 11.376492, y: 11.376492, z: 11.376492}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5141,6 +5161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StraightPlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a239eb135932ba3478d4db291403acdc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5496,7 +5521,7 @@ GameObject:
   m_Layer: 0
   m_Name: RedPlayer
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5509,7 +5534,7 @@ Transform:
   m_GameObject: {fileID: 661449246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.7, y: 5.42, z: -107.2}
+  m_LocalPosition: {x: 19.94, y: -3.55, z: -13.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7251,6 +7276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StraightPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a239eb135932ba3478d4db291403acdc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7651,6 +7681,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stairs45Deg
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa22d548563576441b224bec3402e70f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8304,6 +8339,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairs60Deg
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4a2190981dd04f84e98ccc6acff3ecd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8359,7 +8399,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoints
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -8372,7 +8412,7 @@ Transform:
   m_GameObject: {fileID: 958084994}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 53.5, y: 51.28, z: -55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9196,6 +9236,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: basic room [one window]
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef1baf695b820dd4c9e9a4747a4065e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9530,6 +9575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairs60Deg (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4a2190981dd04f84e98ccc6acff3ecd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9679,7 +9729,7 @@ GameObject:
   - component: {fileID: 1068770515}
   - component: {fileID: 1068770514}
   - component: {fileID: 1068770513}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9962,7 +10012,7 @@ Transform:
   m_GameObject: {fileID: 1131235096}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 71.69, y: 41.68, z: -55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9982,7 +10032,7 @@ GameObject:
   - component: {fileID: 1158632058}
   - component: {fileID: 1158632057}
   - component: {fileID: 1158632056}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10101,8 +10151,8 @@ Transform:
   m_GameObject: {fileID: 1197842790}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.760605, y: 141.77936, z: 37.403236}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 66.848, y: 103, z: -12.656}
+  m_LocalScale: {x: 0.5092353, y: 0.5092353, z: 0.5092353}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 815294519}
@@ -12940,6 +12990,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairs60Deg (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4a2190981dd04f84e98ccc6acff3ecd9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13694,8 +13749,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.9574914, y: 1.0758135, z: 5.061567}
-  m_Center: {x: 1.0143913, y: 0.12413188, z: -1.4246078}
+  m_Size: {x: 3.089219, y: 1.0758135, z: 2.213432}
+  m_Center: {x: -0.9197445, y: 0.12413188, z: -0.0005452546}
 --- !u!23 &1689440643
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13755,7 +13810,7 @@ Transform:
   m_GameObject: {fileID: 1689440640}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0007886066, y: 0.7057879, z: -0.00079155015, w: 0.70842236}
-  m_LocalPosition: {x: 210, y: 60.8, z: 59.3}
+  m_LocalPosition: {x: 126.5, y: 60.8, z: -20.6}
   m_LocalScale: {x: 12.998896, y: 12.998896, z: 12.998896}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15529,7 +15584,7 @@ GameObject:
   m_Layer: 0
   m_Name: BluePlayer
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -15542,7 +15597,7 @@ Transform:
   m_GameObject: {fileID: 1994354182}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 36.7, y: 5.42, z: -91.8}
+  m_LocalPosition: {x: 19.940006, y: -3.5499973, z: 2.0399933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15560,7 +15615,7 @@ GameObject:
   - component: {fileID: 1995699412}
   - component: {fileID: 1995699411}
   - component: {fileID: 1995699410}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15940,7 +15995,7 @@ GameObject:
   m_Layer: 0
   m_Name: BluePlayer
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -15953,7 +16008,7 @@ Transform:
   m_GameObject: {fileID: 2042514042}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 36.7, y: 5.42, z: -91.8}
+  m_LocalPosition: {x: 18.930004, y: -3.5899982, z: 2.2299957}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

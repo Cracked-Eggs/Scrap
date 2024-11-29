@@ -28,7 +28,7 @@ public class ArmCollisionHandler : MonoBehaviourPunCallbacks
                     Debug.Log("On Collision 3 " + collision.gameObject.tag);
                     // Damage the player by 10
                     OnHit(gameObject.transform.position);
-                    otherplayerPhotonView.RPC("TakeDamage", RpcTarget.All, 10, otherplayerPhotonView.ViewID);
+                    otherplayerPhotonView.RPC("TakeDamage", RpcTarget.All, 25, otherplayerPhotonView.ViewID);
                 }
             }
       

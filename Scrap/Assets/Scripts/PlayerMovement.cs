@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     private InputSystem_Actions inputSystem;
     private bool sprinting;
     private bool jumping;
-    private bool grounded;
+    public bool grounded;
     private Vector3 moveInput;  // Movement vector
     private float currentSpeed;  // Current movement speed, gradually increasing or decreasing
     #endregion
@@ -73,6 +73,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         if (grounded)
         {
             jumping = true; // Only jump when grounded
+            animator.SetBool("isJumping", true);
         }
     }
 
@@ -89,12 +90,14 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     }
     private void OnSprintPerformed(InputAction.CallbackContext context)
     {
-        sprinting = true; // Enable sprinting when the sprint button is pressed
+        sprinting = true;
+        
     }
 
     private void OnSprintCanceled(InputAction.CallbackContext context)
     {
         sprinting = false; // Disable sprinting when the sprint button is released
+        
     }
 
     private void Start()
@@ -148,23 +151,43 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         animator.SetFloat("MoveSpeed", normalizedSpeed);
     }
 
-    private void CheckGrounded()
+    void CheckGrounded()
     {
-        RaycastHit hit;
-        Vector3 rayOrigin = transform.position + Vector3.up * 0.1f;
+        // Define offsets for multi-point checks (center, front, back, left, right)
+        Vector3[] offsets = {
+        Vector3.zero, // Center
+        new Vector3(0, 0, 0.5f),   // Front
+        new Vector3(0, 0, -0.5f),  // Back
+        new Vector3(-0.5f, 0, 0),  // Left
+        new Vector3(0.5f, 0, 0)    // Right
+    };
 
-        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, groundCheckDistance, groundLayer))
-        {
-            float angle = Vector3.Angle(hit.normal, Vector3.up);
-            grounded = angle < 45f;
-        }
-        else
-        {
-            grounded = false;
-        }
+        // Reset grounded state
+        grounded = false;
+        animator.SetBool("isJumping", false);
 
-        Debug.DrawRay(rayOrigin, Vector3.down * groundCheckDistance, grounded ? Color.yellow : Color.red);
+        // Loop through each offset
+        foreach (Vector3 offset in offsets)
+        {
+            Vector3 rayOrigin = transform.position + offset + Vector3.up * 0.1f; // Offset the ray slightly upwards
+            Debug.DrawRay(rayOrigin, Vector3.down * groundCheckDistance, Color.yellow);
+           
+
+            // Perform the raycast
+            if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, groundCheckDistance, groundLayer))
+            {
+                 Debug.Log("IsGrounded");
+                // If any raycast hits the ground, we are grounded
+                grounded = true;
+                return;
+            }
+            else
+            {
+                Debug.Log("not grounded");
+            }
+        }
     }
+
 
     private void FixedUpdate()
     {
@@ -192,7 +215,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
             }
         }
 
-        grounded = false; // Reset grounded state for the next frame
+        //grounded = false; // Reset grounded state for the next frame
     }
 
     private void ApplyMovement(float _speed, bool _inAir)

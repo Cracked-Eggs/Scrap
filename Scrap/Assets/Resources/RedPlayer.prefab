@@ -1876,7 +1876,7 @@ MonoBehaviour:
   sprintFOVIncrease: 15
   fovLerpSpeed: 5
   screenShakeIntensity: 0.1
-  screenShakeFrequency: 20
+  screenShakeFrequency: 10
   grounded: 0
   groundLayer:
     serializedVersion: 2
@@ -1970,7 +1970,6 @@ MonoBehaviour:
   maxHealth: 100
   HealthSlider: {fileID: 585218077387767521}
   animator: {fileID: 7136779284411959216}
-  bodyParts: []
 --- !u!95 &7136779284411959216
 Animator:
   serializedVersion: 5

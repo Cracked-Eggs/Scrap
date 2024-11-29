@@ -22,10 +22,11 @@ public class PlayerHealth_Koth : MonoBehaviourPunCallbacks
         if (photonView.ViewID == targetViewID)
         {
             currentHealth -= _damage;
-            animator.SetTrigger("takedmg");
+            animator.SetTrigger("damage");
             HealthSlider.value = currentHealth;
             if (currentHealth <= 0)
             {
+                animator.SetTrigger("dead");
                 //photonView.RPC("setisdead", RpcTarget.All);
                 if (isLocalInstance && gameObject.tag == "RedPlayer")
                 {
@@ -48,7 +49,6 @@ public class PlayerHealth_Koth : MonoBehaviourPunCallbacks
     IEnumerator Respawn_aftersomeseconds(string tag)
     {
         yield return new WaitForSeconds(2f);
-        animator.SetBool("isDead", true);
         if(tag== "RedPlayer")
         {
             RoomManager_KothMode.Instance.Respawn_Red();

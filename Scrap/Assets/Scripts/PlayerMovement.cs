@@ -37,10 +37,13 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     #endregion
     public LayerMask groundLayer; // Assign ground layer in the inspector
     private CapsuleCollider playerCollider;
+    CapPointManager koth;
+
 
     void Awake()
     {
         inputSystem = new InputSystem_Actions();  // Initialize input system actions
+        koth = FindObjectOfType<CapPointManager>();
     }
 
     public override void OnEnable()
@@ -149,6 +152,11 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
         // Set the moveSpeed parameter in the Animator to drive the blend tree
         animator.SetFloat("MoveSpeed", normalizedSpeed);
+
+        if (koth.win == true)
+        {
+            animator.SetTrigger("win");
+        }
     }
 
     void CheckGrounded()

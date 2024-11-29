@@ -227,9 +227,10 @@ public class RoomManager_KothMode : MonoBehaviourPunCallbacks
         CapPointManager capPointManager = FindObjectOfType<CapPointManager>();
         if (capPointManager != null&& !isdead)
         {
-            capPointManager.GameCompletedtxt.text = "Other Player Leave the Game";
+            capPointManager.GameCompletedtxt.text = "Other Player left the Game";
             capPointManager.GameCompleted.SetActive(true);
             Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.None;
         }
         //else if(capPointManager != null && isdead)
         //{

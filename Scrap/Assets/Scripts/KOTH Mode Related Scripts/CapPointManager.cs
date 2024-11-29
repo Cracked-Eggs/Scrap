@@ -84,8 +84,6 @@ public class CapPointManager : MonoBehaviourPunCallbacks
     public Sprite Blue_Filled_Drop;
     public Sprite Blue_Filled_Rectangle;
 
-    public bool win;
-
 
     private void Start()
     {
@@ -351,7 +349,6 @@ public class CapPointManager : MonoBehaviourPunCallbacks
                 else if (!photonView.IsMine && player.CompareTag("BluePlayer"))
                 {
                     circularImage.fillAmount += 0.2f;
-                    
                 }
                 secondCounter = 1;
             }
@@ -698,7 +695,6 @@ public class CapPointManager : MonoBehaviourPunCallbacks
                 GameCompletedtxt.text = "Red Winner";
                 GameCompleted.SetActive(true);
                 Time.timeScale = 0;
-                win = true;
             }
             [PunRPC]
             public void Blue_Winner()
@@ -713,7 +709,6 @@ public class CapPointManager : MonoBehaviourPunCallbacks
                 GameCompletedtxt.text = "Blue Winner";
                 GameCompleted.SetActive(true);
                 Time.timeScale = 0;
-                win = true;
             }
            
    

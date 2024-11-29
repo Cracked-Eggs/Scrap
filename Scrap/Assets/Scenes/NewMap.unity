@@ -15639,7 +15639,6 @@ MonoBehaviour:
   Blue_Filled_Drop: {fileID: 21300000, guid: d5e9264ce59bab540bb8ba73702969fa, type: 3}
   Blue_Filled_Rectangle: {fileID: 21300000, guid: 80681c87a9132bf459bb6c4084a57ef4,
     type: 3}
-  win: 0
 --- !u!114 &974454946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34010,6 +34009,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8613200}
     m_Modifications:
+    - target: {fileID: 3604344484735406470, guid: 94f0aa18c6c18a141add468746d8544a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5003832790685160474, guid: 94f0aa18c6c18a141add468746d8544a,
         type: 3}
       propertyPath: m_Name
@@ -34104,6 +34108,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: 0.0000023830244
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805452617646486991, guid: 94f0aa18c6c18a141add468746d8544a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

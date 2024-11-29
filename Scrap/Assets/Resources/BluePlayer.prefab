@@ -2771,10 +2771,10 @@ MonoBehaviour:
   walkSpeed: 24
   sprintSpeed: 16
   maxVelocityChange: 10
-  acceleration: 5
+  acceleration: 12
   deceleration: 60
   airControl: 0.5
-  jumpForce: 20
+  jumpForce: 25
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   groundCheckDistance: 0.1

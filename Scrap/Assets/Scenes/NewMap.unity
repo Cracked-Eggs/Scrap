@@ -8654,7 +8654,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 973e184af6e24ad40b5bf496c7d7a735,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 86.676155
+      value: 87.69027
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 973e184af6e24ad40b5bf496c7d7a735,
         type: 3}
@@ -8679,7 +8679,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 973e184af6e24ad40b5bf496c7d7a735,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: 3.0116
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 973e184af6e24ad40b5bf496c7d7a735,
         type: 3}
@@ -11231,6 +11231,7 @@ MonoBehaviour:
   Blue_Filled_Drop: {fileID: 21300000, guid: d5e9264ce59bab540bb8ba73702969fa, type: 3}
   Blue_Filled_Rectangle: {fileID: 21300000, guid: 80681c87a9132bf459bb6c4084a57ef4,
     type: 3}
+  win: 0
 --- !u!114 &974454946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19634,7 +19635,7 @@ GameObject:
   - component: {fileID: 1876051427}
   - component: {fileID: 1876051426}
   - component: {fileID: 1876051429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ConveyorBelt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19651,7 +19652,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 133.33012, y: -141.77927, z: -176.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.1073, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1197842791}

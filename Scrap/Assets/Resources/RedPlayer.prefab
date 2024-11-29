@@ -1872,7 +1872,7 @@ MonoBehaviour:
   groundCheckDistance: 7
   animator: {fileID: 7136779284411959216}
   playerCamera: {fileID: 3280193659188448315}
-  baseFOV: 70
+  baseFOV: 80
   sprintFOVIncrease: 15
   fovLerpSpeed: 5
   screenShakeIntensity: 0.1

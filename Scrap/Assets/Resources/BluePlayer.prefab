@@ -393,7 +393,6 @@ Transform:
   - {fileID: 5268645814401858112}
   - {fileID: 4894396274662328105}
   - {fileID: 8934239938619272249}
-  - {fileID: 6647025431285167193}
   m_Father: {fileID: 5333499556672370814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &456616367737986806
@@ -2494,6 +2493,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6647025431285167193}
   - {fileID: 1075252091517436862}
   - {fileID: 516420529142087979}
   - {fileID: 957386982047338542}
@@ -2790,7 +2790,7 @@ MonoBehaviour:
   groundCheckDistance: 7
   animator: {fileID: 7136779284411959216}
   playerCamera: {fileID: 4513185200700738384}
-  baseFOV: 60
+  baseFOV: 80
   sprintFOVIncrease: 15
   fovLerpSpeed: 5
   screenShakeIntensity: 0.1
@@ -3341,7 +3341,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2129284105075725633}
-  m_Father: {fileID: 957386982047338542}
+  m_Father: {fileID: 5333499556672370814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8670982635005516687
 MonoBehaviour:

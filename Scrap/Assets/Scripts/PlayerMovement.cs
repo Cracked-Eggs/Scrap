@@ -24,14 +24,15 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     public Animator animator; // Reference to Animator component
 
     #region Private Variables
-    public Vector2 input;
     private Rigidbody rb;
     private InputAction _jumpAction;  // Jump action from Input System
+    private InputAction _moveAction;
+    private InputAction _sprintAction;// Movement action from Input System
     private InputSystem_Actions inputSystem;
     private bool sprinting;
     private bool jumping;
     private bool grounded;
-    private Vector3 lastTargetVelocity;
+    private Vector3 moveInput;  // Movement vector
     private float currentSpeed;  // Current movement speed, gradually increasing or decreasing
     #endregion
     public LayerMask groundLayer; // Assign ground layer in the inspector
@@ -44,25 +45,63 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
     public override void OnEnable()
     {
-        _jumpAction = inputSystem.Player.Jump;  // Bind Jump action
-        _jumpAction.performed += OnJumpPerformed;  // Subscribe to jump event
+        // Bind input actions
+        _jumpAction = inputSystem.Player.Jump;
+        _moveAction = inputSystem.Player.Move;
+
+        _jumpAction.performed += OnJumpPerformed; // Subscribe to jump event
+        _moveAction.performed += OnMovePerformed; // Subscribe to move event
+        _moveAction.canceled += OnMoveCanceled; // Handle stopping movement
+
+        _sprintAction = inputSystem.Player.Sprint; // Bind Sprint action
+        _sprintAction.performed += OnSprintPerformed; // Subscribe to sprint event
+        _sprintAction.canceled += OnSprintCanceled; // Subscribe to sprint cancel
+        _sprintAction.Enable();
+
         _jumpAction.Enable();
+        _moveAction.Enable();
     }
 
     public override void OnDisable()
     {
         _jumpAction.Disable();
+        _moveAction.Disable();
     }
 
     private void OnJumpPerformed(InputAction.CallbackContext context)
     {
-        jumping = true;  // Set the jumping flag to true when the jump button is pressed
+        if (grounded)
+        {
+            jumping = true; // Only jump when grounded
+        }
+    }
+
+    private void OnMovePerformed(InputAction.CallbackContext context)
+    {
+        // Get movement input as a Vector2 from the action
+        Vector2 input = context.ReadValue<Vector2>();
+        moveInput = new Vector3(input.x, 0, input.y);
+    }
+
+    private void OnMoveCanceled(InputAction.CallbackContext context)
+    {
+        moveInput = Vector3.zero; // Stop movement when input is canceled
+    }
+    private void OnSprintPerformed(InputAction.CallbackContext context)
+    {
+        sprinting = true; // Enable sprinting when the sprint button is pressed
+    }
+
+    private void OnSprintCanceled(InputAction.CallbackContext context)
+    {
+        sprinting = false; // Disable sprinting when the sprint button is released
     }
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
+
         // Ensure the animator is attached and assigned
         if (animator == null)
         {
@@ -76,16 +115,12 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
         if (InputManager.LockInput)
         {
-            input = Vector2.zero;
+            moveInput = Vector3.zero;
             sprinting = false;
             jumping = false;
-            animator.SetBool("isMoving", false);  // Set to idle when input is locked
+            animator.SetBool("isMoving", false); // Set to idle when input is locked
             return;
         }
-
-        // Gather input for movement
-        input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        input.Normalize();
 
         // Detect sprinting (controller or keyboard left shift)
         sprinting = Input.GetKey(KeyCode.LeftShift);
@@ -93,22 +128,14 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         // Update the target speed
         float targetSpeed = 0f;
 
-        if (input.magnitude > 0) // Moving
+        if (moveInput.magnitude > 0) // Moving
         {
-            if (sprinting)
-            {
-                targetSpeed = sprintSpeed;
-            }
-            else
-            {
-                targetSpeed = walkSpeed;
-            }
-
-            animator.SetBool("isMoving", true);  // Player is moving
+            targetSpeed = sprinting ? sprintSpeed : walkSpeed;
+            animator.SetBool("isMoving", true); // Player is moving
         }
         else // Idle
         {
-            animator.SetBool("isMoving", false);  // Player is idle
+            animator.SetBool("isMoving", false); // Player is idle
         }
 
         // Gradually change the current speed towards the target speed
@@ -126,7 +153,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         RaycastHit hit;
         Vector3 rayOrigin = transform.position + Vector3.up * 0.1f;
 
-        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 6.5f, groundLayer))
+        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, groundCheckDistance, groundLayer))
         {
             float angle = Vector3.Angle(hit.normal, Vector3.up);
             grounded = angle < 45f;
@@ -136,7 +163,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
             grounded = false;
         }
 
-        Debug.DrawRay(rayOrigin, Vector3.down * 6.5f, grounded ? Color.yellow : Color.red);
+        Debug.DrawRay(rayOrigin, Vector3.down * groundCheckDistance, grounded ? Color.yellow : Color.red);
     }
 
     private void FixedUpdate()
@@ -150,7 +177,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
             if (jumping)
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-                jumping = false;  // Reset the jump flag after applying force
+                jumping = false; // Reset the jump flag after applying force
             }
             else
             {
@@ -159,22 +186,22 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         }
         else
         {
-            if (input.magnitude > 0.5f)
+            if (moveInput.magnitude > 0.1f)
             {
                 ApplyMovement(currentSpeed, true);
             }
         }
 
-        grounded = false;  // Reset grounded state for the next frame
+        grounded = false; // Reset grounded state for the next frame
     }
 
     private void ApplyMovement(float _speed, bool _inAir)
     {
-        Vector3 targetVelocity = new Vector3(input.x, 0, input.y);
-        targetVelocity = transform.TransformDirection(targetVelocity) * _speed;
+        Vector3 targetVelocity = moveInput.normalized * _speed;
+        targetVelocity = transform.TransformDirection(targetVelocity);
 
         if (_inAir)
-            targetVelocity += lastTargetVelocity * (1 - airControl);
+            targetVelocity += rb.velocity * (1 - airControl);
 
         Vector3 velocityChange = targetVelocity - rb.velocity;
 

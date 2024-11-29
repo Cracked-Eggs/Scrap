@@ -2230,7 +2230,7 @@ MonoBehaviour:
   - _BOING
   - _BOOM
   - _POW
-  LocalPhotonView: {fileID: 0}
+  LocalPhotonView: {fileID: 1353656235600279086}
 --- !u!1 &5301376822820288265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3504,7 +3504,7 @@ MonoBehaviour:
   - _BOING
   - _BOOM
   - _POW
-  LocalPhotonView: {fileID: 0}
+  LocalPhotonView: {fileID: 1353656235600279086}
 --- !u!1 &8959756340393721741
 GameObject:
   m_ObjectHideFlags: 0

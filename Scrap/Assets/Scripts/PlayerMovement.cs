@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     public float maxVelocityChange = 10f;
     public float acceleration = 5f;  // Speed at which we accelerate
     public float deceleration = 10f; // Speed at which we decelerate
+    private bool toggleSprint = false;
 
     [Header("Air & Jumping Controls")]
     [Range(0, 1f)] public float airControl = 0.5f;
@@ -23,27 +24,38 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     [Header("Animation")]
     public Animator animator; // Reference to Animator component
 
+    [Header("Camera Effects")]
+    public Camera playerCamera; // Assign the player's camera in the inspector
+    public float baseFOV = 70f; // Default FOV
+    public float sprintFOVIncrease = 15f; // Amount to increase FOV when sprinting
+    public float fovLerpSpeed = 5f; // How quickly the FOV adjusts
+    public float screenShakeIntensity = 0.1f; // Intensity of the screen shake
+    public float screenShakeFrequency = 20f; // Frequency of the screen shake
+
     #region Private Variables
     private Rigidbody rb;
     private InputAction _jumpAction;  // Jump action from Input System
     private InputAction _moveAction;
-    private InputAction _sprintAction;// Movement action from Input System
+    private InputAction _sprintAction; // Movement action from Input System
     private InputSystem_Actions inputSystem;
     private bool sprinting;
     private bool jumping;
     public bool grounded;
     private Vector3 moveInput;  // Movement vector
     private float currentSpeed;  // Current movement speed, gradually increasing or decreasing
+    private float currentFOV; // Current field of view
+    private float shakeOffset; // Offset for screen shake
     #endregion
+
     public LayerMask groundLayer; // Assign ground layer in the inspector
     private CapsuleCollider playerCollider;
     CapPointManager koth;
-
 
     void Awake()
     {
         inputSystem = new InputSystem_Actions();  // Initialize input system actions
         koth = FindObjectOfType<CapPointManager>();
+        currentFOV = baseFOV; // Initialize FOV
     }
 
     public override void OnEnable()
@@ -58,7 +70,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
         _sprintAction = inputSystem.Player.Sprint; // Bind Sprint action
         _sprintAction.performed += OnSprintPerformed; // Subscribe to sprint event
-        _sprintAction.canceled += OnSprintCanceled; // Subscribe to sprint cancel
+
         _sprintAction.Enable();
 
         _jumpAction.Enable();
@@ -82,36 +94,36 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
     private void OnMovePerformed(InputAction.CallbackContext context)
     {
-        // Get movement input as a Vector2 from the action
         Vector2 input = context.ReadValue<Vector2>();
         moveInput = new Vector3(input.x, 0, input.y);
     }
 
     private void OnMoveCanceled(InputAction.CallbackContext context)
     {
-        moveInput = Vector3.zero; // Stop movement when input is canceled
-    }
-    private void OnSprintPerformed(InputAction.CallbackContext context)
-    {
-        sprinting = true;
-        
+        moveInput = Vector3.zero;
     }
 
-    private void OnSprintCanceled(InputAction.CallbackContext context)
+    private void OnSprintPerformed(InputAction.CallbackContext context)
     {
-        sprinting = false; // Disable sprinting when the sprint button is released
-        
+      
+        toggleSprint = !toggleSprint;
     }
+
+   
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
 
-        // Ensure the animator is attached and assigned
         if (animator == null)
         {
             animator = GetComponent<Animator>();
+        }
+
+        if (playerCamera == null)
+        {
+            Debug.LogWarning("Player Camera not assigned. Please assign it in the inspector.");
         }
     }
 
@@ -124,78 +136,77 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
             moveInput = Vector3.zero;
             sprinting = false;
             jumping = false;
-            animator.SetBool("isMoving", false); // Set to idle when input is locked
+            toggleSprint = false; // Reset sprint toggle when input is locked
+            animator.SetBool("isMoving", false);
             return;
         }
 
-        // Detect sprinting (controller or keyboard left shift)
-        sprinting = Input.GetKey(KeyCode.LeftShift);
-
-        // Update the target speed
-        float targetSpeed = 0f;
-
-        if (moveInput.magnitude > 0) // Moving
+        // If movement is zero, reset sprint toggle
+        if (moveInput.magnitude <= 0.1f)
         {
-            targetSpeed = sprinting ? sprintSpeed : walkSpeed;
-            animator.SetBool("isMoving", true); // Player is moving
-        }
-        else // Idle
-        {
-            animator.SetBool("isMoving", false); // Player is idle
+            toggleSprint = false;
         }
 
-        // Gradually change the current speed towards the target speed
+        // Determine sprinting based on toggle and movement
+        sprinting = toggleSprint && moveInput.magnitude > 0;
+
+        // Target speed depends on movement and sprinting state
+        float targetSpeed = moveInput.magnitude > 0 ? (sprinting ? sprintSpeed : walkSpeed) : 0f;
+
+        // Gradually interpolate the current speed toward the target speed
         currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, (targetSpeed > currentSpeed ? acceleration : deceleration) * Time.deltaTime);
 
-        // Normalize the current speed for the Animator (0 to 1 range)
+        // Normalize speed to feed into the animator
         float normalizedSpeed = Mathf.InverseLerp(0f, sprintSpeed, currentSpeed);
-
-        // Set the moveSpeed parameter in the Animator to drive the blend tree
         animator.SetFloat("MoveSpeed", normalizedSpeed);
 
-        if (koth.win == true)
-        {
-            animator.SetTrigger("win");
-        }
+        // Update camera effects
+        UpdateFOV();
     }
+
+
+    private void UpdateFOV()
+    {
+        if (playerCamera == null) return;
+
+        // Adjust the FOV for sprinting
+        float targetFOV = sprinting ? baseFOV + sprintFOVIncrease : baseFOV;
+        currentFOV = Mathf.Lerp(currentFOV, targetFOV, fovLerpSpeed * Time.deltaTime);
+
+        // Apply side-to-side shake during sprinting
+        float shakeOffsetX = sprinting ? Mathf.Sin(Time.time * screenShakeFrequency) * screenShakeIntensity : 0f;
+
+        // Set the camera's FOV and position offset
+        playerCamera.fieldOfView = currentFOV;
+        playerCamera.transform.localPosition = new Vector3(shakeOffsetX, playerCamera.transform.localPosition.y, playerCamera.transform.localPosition.z);
+    }
+
 
     void CheckGrounded()
     {
-        // Define offsets for multi-point checks (center, front, back, left, right)
         Vector3[] offsets = {
-        Vector3.zero, // Center
-        new Vector3(0, 0, 0.5f),   // Front
-        new Vector3(0, 0, -0.5f),  // Back
-        new Vector3(-0.5f, 0, 0),  // Left
-        new Vector3(0.5f, 0, 0)    // Right
-    };
+            Vector3.zero,
+            new Vector3(0, 0, 0.5f),
+            new Vector3(0, 0, -0.5f),
+            new Vector3(-0.5f, 0, 0),
+            new Vector3(0.5f, 0, 0)
+        };
 
-        // Reset grounded state
         grounded = false;
         animator.SetBool("isJumping", false);
 
-        // Loop through each offset
         foreach (Vector3 offset in offsets)
         {
-            Vector3 rayOrigin = transform.position + offset + Vector3.up * 0.1f; // Offset the ray slightly upwards
+            Vector3 rayOrigin = transform.position + offset + Vector3.up * 0.1f;
             Debug.DrawRay(rayOrigin, Vector3.down * groundCheckDistance, Color.yellow);
-           
 
-            // Perform the raycast
             if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, groundCheckDistance, groundLayer))
             {
-                 Debug.Log("IsGrounded");
-                // If any raycast hits the ground, we are grounded
                 grounded = true;
                 return;
             }
-            else
-            {
-                Debug.Log("not grounded");
-            }
         }
     }
-
 
     private void FixedUpdate()
     {
@@ -208,7 +219,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
             if (jumping)
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-                jumping = false; // Reset the jump flag after applying force
+                jumping = false;
             }
             else
             {
@@ -222,8 +233,6 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
                 ApplyMovement(currentSpeed, true);
             }
         }
-
-        //grounded = false; // Reset grounded state for the next frame
     }
 
     private void ApplyMovement(float _speed, bool _inAir)

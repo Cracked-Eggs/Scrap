@@ -1,7 +1,7 @@
 using Photon.Pun;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerHealth_Koth : MonoBehaviourPunCallbacks
 {
@@ -11,11 +11,17 @@ public class PlayerHealth_Koth : MonoBehaviourPunCallbacks
     public Slider HealthSlider;
     public Animator animator;
 
+    private bool isDetachingParts = false; // Prevent multiple detaches
+    public GameObject[] bodyParts; // List of body parts to detach and despawn
+
     private void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
+        // Initialize body parts array with the detached parts
+        bodyParts = GetComponentsInChildren<GameObject>();
     }
+
     [PunRPC]
     public void TakeDamage(int _damage, int targetViewID)
     {
@@ -27,42 +33,73 @@ public class PlayerHealth_Koth : MonoBehaviourPunCallbacks
             if (currentHealth <= 0)
             {
                 animator.SetTrigger("dead");
-                //photonView.RPC("setisdead", RpcTarget.All);
-                if (isLocalInstance && gameObject.tag == "RedPlayer")
+                if (!isDetachingParts) // Ensure this is called once
                 {
-                    Debug.Log("Red Died");
-                   
-                    StartCoroutine(Respawn_aftersomeseconds("RedPlayer"));
-                    //RoomManager_KothMode.Instance.Respawn_Red();
-                   
+                    isDetachingParts = true;
+                    StartCoroutine(WaitForDeathAnimationAndDetach());
                 }
-                else if (isLocalInstance && gameObject.tag == "BluePlayer")
-                {
-                    Debug.Log("Blue Died");
-                    StartCoroutine(Respawn_aftersomeseconds("BluePlayer"));
-                    //RoomManager_KothMode.Instance.Respawn_Blue();
-                }
-                Destroy(gameObject, 2.2f);
             }
         }
     }
-    IEnumerator Respawn_aftersomeseconds(string tag)
+
+    private IEnumerator WaitForDeathAnimationAndDetach()
     {
-        yield return new WaitForSeconds(2f);
-        if(tag== "RedPlayer")
+        // Wait for the death animation to finish
+        AnimatorStateInfo animationState = animator.GetCurrentAnimatorStateInfo(0);
+        while (animationState.IsName("Death") && animationState.normalizedTime < 1.0f) // Update this name if necessary
         {
-            RoomManager_KothMode.Instance.Respawn_Red();
-            
+            animationState = animator.GetCurrentAnimatorStateInfo(0);
+            yield return null; // Wait for the next frame
         }
-        else if(tag== "BluePlayer")
+
+        // Once the animation is finished, trigger detachment of body parts
+        if (photonView.IsMine)
         {
-            RoomManager_KothMode.Instance.Respawn_Blue();
-           
+            Attach attachScript = GetComponent<Attach>();  // Make sure Attach is attached to the same GameObject
+            if (attachScript != null)
+            {
+                attachScript.On_Detach(default); // Trigger the detach logic
+            }
+
+            // Despawn body parts after some time
+            DespawnBodyParts();
+        }
+
+        // Optional: Start respawn process here
+        if (isLocalInstance && gameObject.CompareTag("RedPlayer"))
+        {
+            StartCoroutine(Respawn_aftersomeseconds("RedPlayer"));
+        }
+        else if (isLocalInstance && gameObject.CompareTag("BluePlayer"))
+        {
+            StartCoroutine(Respawn_aftersomeseconds("BluePlayer"));
+        }
+
+        Destroy(gameObject, 2.2f); // Destroy the player character object
+    }
+
+    private void DespawnBodyParts()
+    {
+        // Despawn all body parts after 2 seconds
+        foreach (var part in bodyParts)
+        {
+            if (part != null)
+            {
+                Destroy(part, 2f); // You can adjust the time as needed
+            }
         }
     }
-    //[PunRPC]
-    //public void setisdead()
-    //{
-    //    RoomManager_KothMode.Instance.isdead = true;
-    //}
+
+    private IEnumerator Respawn_aftersomeseconds(string tag)
+    {
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds before respawn
+        if (tag == "RedPlayer")
+        {
+            RoomManager_KothMode.Instance.Respawn_Red();
+        }
+        else if (tag == "BluePlayer")
+        {
+            RoomManager_KothMode.Instance.Respawn_Blue();
+        }
+    }
 }

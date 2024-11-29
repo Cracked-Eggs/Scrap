@@ -2768,18 +2768,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b198cdba28e5ac244a8a8bdf09429538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 24
-  sprintSpeed: 16
+  walkSpeed: 16
+  sprintSpeed: 24
   maxVelocityChange: 10
   acceleration: 12
-  deceleration: 60
-  airControl: 0.5
-  jumpForce: 25
+  deceleration: 100
+  airControl: 0
+  jumpForce: 15
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
-  groundCheckDistance: 0.1
+  groundCheckDistance: 7
   animator: {fileID: 7136779284411959216}
-  input: {x: 0, y: 0}
+  grounded: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
